@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBox</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $("#menu").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+   });
+   </script>
+   <script type="text/javascript">
+   function up() {  
+    var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);  
+  if(top > 0) {  
+    window.scrollBy(0,((top+100)/-10));  
+    t = setTimeout('up()',20);  
+  } else clearTimeout(t);  
+  return false;  
+  } 
+    </script>
+</head>
+<body>
+    <div class="BB">
+        BookBox
+    </div>
+    <img src="img/Line.png"  alt="" class="Line">
+    <nav id="menu">
+        <ul class="menu">
+            <li class="menu-navigation">
+                <a href="#1">
+                    Главная
+                </a>
+            </li>
+            <li class="menu-navigation">
+                <a href="#2">
+                    Отзывы
+                </a>
+            </li>
+            <li class="menu-navigation">
+                <a href="#3">
+                    Корзина
+                </a>
+            </li>
+            <li class="menu-navigation">
+                <a href="#4">
+                    Контакты
+                </a>
+            </li>
+            <li class="menu-navigation">
+                <a href="#5">
+                    О нас
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="centre"> 
+        <div class="content">   
+            Не знаете что подарить? <br>
+            Затрудняетесь с выбором подарка? <br>   
+            Книга - лучший подарок!!!
+        </div>
+    </div>
+    <div id="right">
+        <div class="book">
+            <img src="img/book.png">
+        </div>
+    </div>
+</head>
+<body>
+<div id='1'></div>
+    <div id="boxparty">
+        <p id="pt">
+            Предлагаемые товары
+        </p>
+
+        <p class="box1">
+            <img src="img/box1.png">
+            299 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        
+        <p class="box2">
+            <img src="img/box2.png">
+            499 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+
+        <p class="box3">
+            <img src="img/box3.png">
+            599 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        
+        <p class="box4">
+            <img src="img/box4.png">
+            699 р.<br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        
+        <p class="box5">
+            <img src="img/box5.png">
+            999 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        
+        <p class="box6">
+            <img src="img/box6.png">
+            1 260 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        
+        <p class="box7">
+            <img src="img/box7.png">
+            1 599 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        
+        <p class="box8">
+            <img src="img/box8.png">
+            4 999 р. <br>
+            <a href="#box">
+                Подробнее
+            </a>
+        </p>
+        <div id='2'></div>
+    </div>
+
+    <div class="slider" id="box">
+        <div class="slider__wrapper">
+          <div class="slider__items">
+            <div class="slider__item">
+              <div>
+                    <div id="slider-box">
+                        <img src="img/box1.png" >
+                    </div>
+                    <div id="slider-text">
+                        299 р. <br>
+                        Что входит:<br>
+                        Детская книга, леденцы.<br>
+                        Данный Box будет интересен детям. 
+                    </div>
+                    <input type="button" value="В корзину"id="kypit" data-id='#1'>
+                    <div id="war">
+                        Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+                    </div>
+              </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box2.png">
+                </div>
+                <div id="slider-text">
+                    499 р.<br>
+                    Что входит:<br>
+                    2 детские книги, леденцы.<br>
+                    Данный Box будет интересен детям.
+                </div>
+                <input type="button" value="В корзину"id="kypit">
+                <div id="war">
+                    Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+                </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box3.png">
+                </div>
+                <div id="slider-text">
+                    599 р.<br>
+                    Что входит:<br>
+                    Книга жанр-детектив, леденцы.<br>
+                    Данный Box будет интересен тем, кто больше любит расследования. 
+                </div>
+                <input type="button" value="В корзину"id="kypit">
+                <div id="war">
+                    Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+                </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box4.png">
+                </div>
+                <div id="slider-text">
+                    699 р.<br>
+                    Что входит:<br>
+                    Книга жанр-фантастика, леденцы.<br>
+                    Данный Box будет интересен тем, кто больше любит фантастику. 
+                </div>
+                <input type="button" value="В корзину"id="kypit">
+                <div id="war">
+                    Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+                </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box5.png">
+                </div>
+                <div id="slider-text">
+                    999 р.<br>
+                    Что входит:<br>
+                    Книга жанр-исторический роман, леденцы.<br>
+                    Данный Box будет интересен тем, кто больше любит романы. 
+                </div>
+                <input type="button" value="В корзину"id="kypit">
+                <div id="war">
+                    Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+                </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box6.png">
+                </div>
+                <div id="slider-text">
+                    1 260 р.<br>
+                    Что входит:<br>
+                    Книга жанр-ужасы/трилелр.<br>
+                    Данный Box будет интересен тем, кто больше любит ужасы. 
+                </div>
+                <input type="button" value="В корзину"id="kypit">
+            <div id="war">
+                Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+            </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box7.png">
+                </div>
+                <div id="slider-text">
+                    1 599 р.<br>
+                    Что входит:<br>
+                    Книга классическая, чай рассыпчатый, леденцы.<br>
+                    Данный Box будет интересен тем, кто больше любит классическую литературу. 
+                </div>
+                <input type="button" value="В корзину"id="kypit">
+            <div id="war">
+                Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+            </div>
+            </div>
+            <div class="slider__item">
+                <div id="slider-box">
+                    <img src="img/box8.png">
+                </div>
+                <div id="slider-text">
+                4 999 р.<br>
+                Что входит:<br>
+                Набор книг: классическая, роман, ужасы/триллер, 2 детские<br>
+                Данный Box будет интересен тем, кто не знает что же почитать. 
+            </div>
+            <input type="button" value="В корзину"id="kypit">
+            <div id="war">
+                Цена бокса может быть выше либо ниже себе стоимости. И пусть удача, всегда будет с вами.
+            </div>
+            </div>
+          </div>
+        </div>
+        <a class="slider__control slider__control_prev" href="#" role="button"></a>
+        <a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
+      </div>
+    
+      <script src="main.js"></script>
+      <script>
+        slideShow('.slider', {
+          isAutoplay: false
+        });
+      </script>
+     
+    <p id="qq">
+        Отзывы покупателей
+    </p>
+    <div id="boxcomment">
+        <img src="img/boxcomment1.png"  alt="" id="left">
+        <div class="textc">
+            <div class="ww">
+                Читатель №1
+            </div> 
+            <br>
+            Очень быстро пришло!!! Спасибо огромное, сын доволен. &#128519;&#128519;&#128519;
+        </div>
+    </div>
+    <div id="boxcomment">
+        <img src="img/boxcomment2.png"  alt="" id="left">
+        <div class="textc">
+            <div class="ww">
+                Читатель №2
+            </div>
+            <br>
+            Аккуратная, красивая упаковка. Всем довольны. спасибо!&#128525;
+        </div>
+    </div>
+    <div id="boxcomment">
+        <img src="img/boxcomment3.png"  alt="" id="left">
+        <div class="textc">
+            <div class="ww">
+                Читатель №3 
+            </div>
+            <br>
+            Босс доволен, всем советую этот сайт.&#128588;
+        </div>
+    </div>
+    <div id='3'></div>
+    <div class="korzina">
+        <img hidden src="img/box1.png" alt="" id="box1">
+        <img hidden src="img/box2.png" alt="" id="box2">
+        <img hidden src="img/box3.png" alt="" id="box3">
+        <img hidden src="img/box4.png" alt="" id="box4">
+        <img hidden src="img/box5.png" alt="" id="box5">
+        <img hidden src="img/box6.png" alt="" id="box6">
+        <img hidden src="img/box7.png" alt="" id="box7">
+        <img hidden src="img/box8.png" alt="" id="box8">
+        <p class="korzina-text">
+        Уупс...<br> 
+        Похоже ваша<br>
+        корзина пуста. <br>
+        Перейдите на<br>
+        главную и <br>
+        порадуйте себя<br>
+        и близких
+        </p>
+    </div>
+
+
+
+
+    <form action="action_page.php">
+        <div class="container">
+          <h1>Оформление заказа</h1>
+          <input type="text" placeholder="ФИО" name="fio" required>
+          <input type="text" placeholder="Населенный пункт" name="np" required>
+          <input type="text" placeholder="Почтовое отделение" name="poch" required>
+          <input type="text" placeholder="Способ оплаты" name="opl" required>
+          <input type="text" placeholder="Номер телефона" name="numb" required>
+          <button type="submit" class="registerbtn">Заказать</button>
+        </div>
+    </form>
+
+    <div id="podval">
+        <div id='4'></div>
+        <div class="kk">
+            Иногда вы не знаете, что же почитать. Пересмотрели множество 
+            вариантон, но все равно что-то не то и что-то не нравитсся. 
+            На нашем сайте вы просто делаете заказ, а все остальное 
+            сделаем мы. После прочтения или получения, вы можете 
+            оставить отзыв на нашем сайте и обсудить книгу.
+        </div>
+        <div class="tt">
+            Тверская ул., 8, стр. 1, Москва, 125009
+        </div>
+        <div id="right">
+            <div class="yy">
+                По всем вопросам звонить:<br>
+                +7 (495) 629-64-83
+            </div>
+        </div>
+
+        <div class="ss">
+            <a href="https://www.youtube.com/?gl=RU&hl=ru"><img src="img/yt.png"  alt="" id="yt"></a>
+            <a href="https://ru-ru.facebook.com/"><img src="img/fb.png"  alt="" id="fb"></a>
+            <a href="https://www.instagram.com/?hl=ru"><img src="img/inst.png"  alt="" id="inst"></a>
+            <a href="https://www.whatsapp.com/?lang=ru"><img src="img/wats.png"  alt="" id="wats"></a>
+        </div>
+    </div>
+
+
+
+    <div id="back-top">
+        <a href="#" onclick="return up()">ВВЕРХ</a>  
+    </div>
+
+
+
+</body> 
+</html>
